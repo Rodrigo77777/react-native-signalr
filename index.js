@@ -22,7 +22,7 @@ module.exports = {
   },
   hubConnection: (serverUrl, headers) => {
     if (!signalRHubConenctionFunc) {
-      require('ms-signalr-client');
+      require('signalr');
       signalRHubConenctionFunc = window.jQuery.hubConnection;
     }
     const protocol = serverUrl.split('//')[0];
